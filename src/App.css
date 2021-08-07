@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+.container {
+  font-family: 'Roboto';
+  margin: auto;
+  padding: 0 15px;
+  width: 90vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section {
+  background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.section h2 {
+  background-color: black;
   color: white;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-list {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  max-width: 150px;
+  padding: 5px;
+  text-align: center;
 }
