@@ -39,7 +39,7 @@ const App = () => {
 
   const getCard = (id) => savedCardData.filter((item) => item?.scryfall_uri.includes(id))[0];
 
-  const getArt = (object) => object?.image_uris.small;
+  const getArt = (object) => object?.image_uris?.small || object?.card_faces[0]?.image_uris?.small;
   const getTitle = (object) => object?.name;
   const getExp = (object) => object?.set_name;
   const getPrice = (object) => object?.prices.usd;

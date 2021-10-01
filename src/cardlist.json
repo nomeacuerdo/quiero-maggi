@@ -7,7 +7,8 @@
   {
     "id": 4,
     "title": "Adventures in the Forgotten Realms",
-    "cards": ["afr/100","afr/292","afr/287","afr/290","afr/197","afr/296","afr/297","afr/350"]
+    "cards": ["afr/100","afr/197","afr/350"],
+    "hidden": ["afr/292","afr/287","afr/290","afr/296","afr/297"]
   },
   {
     "id": 3,
