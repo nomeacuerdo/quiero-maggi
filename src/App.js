@@ -42,6 +42,7 @@ const App = () => {
   const getArt = (object) => object?.image_uris.small;
   const getTitle = (object) => object?.name;
   const getExp = (object) => object?.set_name;
+  const getPrice = (object) => object?.prices.usd;
   const isToken = (object) => object?.set_type === "token";
 
   return (
@@ -56,7 +57,7 @@ const App = () => {
                   ? item.cards.map((i) =>
                     !gotCards.includes(i)
                       ? (
-                        <div key={i} className="card" onClick={() => gotACard(i)}>
+                        <div key={i} data-code={i} className="card" onClick={() => gotACard(i)}>
                           <img src={getArt(getCard(i))} alt={getTitle(getCard(i))} />
                           <div className="title">{getTitle(getCard(i))}</div>
                           {
@@ -66,6 +67,7 @@ const App = () => {
                             )
                             : null
                           }
+                          <small>TCG: {getPrice(getCard(i))}</small>
                         </div>
                       )
                       : null
@@ -81,7 +83,7 @@ const App = () => {
         <div className="card-list">
           {
             gotCards.map((i) => (
-              <div key={i} className="card" onClick={() => lostACard(i)}>
+              <div key={i} data-code={i} className="card" onClick={() => lostACard(i)}>
                 <img src={getArt(getCard(i))} alt={getTitle(getCard(i))} />
                 <div className="title">{getTitle(getCard(i))}</div>
               </div>

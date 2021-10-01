@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Modern Horizons 2",
-    "cards": ["mh2/81", "mh2/12"]
+    "cards": ["mh2/261"]
   },
   {
     "id": 2,
@@ -10,14 +10,19 @@
     "cards": ["afr/100","afr/292","afr/287","afr/290","afr/197","afr/296","afr/297","afr/350"]
   },
   {
+    "id": 3,
+    "title": "Innistrad 3",
+    "cards": []
+  },
+  {
     "id": 4,
     "title": "Cartas de esta edición exactamente",
-    "cards": ["sta/88","sta/33e","tkhm/11","tmed/W2"]
+    "cards": ["tkhm/11","tmed/W2", "sld/522", "ps19/207"]
   },
   {
     "id": 5,
     "title": "No importa el set/edición, pero que sea baratico",
-    "cards": ["soi/245","vis/137","cma/152","c19/18","tsr/234","m11/162","usg/151","mma/159","m20/198","emn/160","fut/73","uma/109","mb1/1299","tor/77","uma/194"],
-    "hidden": ["soi/245", "mh2/261"]
+    "cards": ["c19/18","m11/162"],
+    "hidden": ["mh2/261"]
   }
 ]
