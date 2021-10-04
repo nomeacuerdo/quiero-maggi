@@ -29,8 +29,10 @@ const App = () => {
       const datas = requests.map((item) => item.value?.data);
       setSavedCardData(datas);
     };
+    
+    const SearchCardList = cardList.reduce((acc, item) => [...acc, ...item.cards], []);
 
-    if (savedCardData.length === 0) {
+    if (savedCardData.length === 0 || SearchCardList.length !== savedCardData.length) {
       const urlList = [];
       cardList.map((item) => item.cards.map((id) => urlList.push(axios.get(`${endpoint}/cards/${id}`))));
       fetchCardData(urlList);
