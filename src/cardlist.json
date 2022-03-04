@@ -1,19 +1,19 @@
 [
   {
+    "id": 3,
+    "title": "Kamigawa",
+    "cards": ["neo/2", "neo/23", "neo/60", "neo/102", "neo/134", "neo/194", "neo/200", "neo/359", "neo/227", "neo/362", "neo/406", "neo/407", "neo/408", "neo/409", "neo/410"]
+  },
+  {
     "id": 5,
-    "title": "Innistrad 3",
-    "cards": ["mid/149", "mid/159", "mid/155"]
+    "title": "Innistrad MH y CV",
+    "cards": ["mid/149", "vow/170"]
   },
   {
     "id": 4,
     "title": "Adventures in the Forgotten Realms",
     "cards": ["afr/100","afr/197","afr/350"],
-    "hidden": ["afr/292","afr/287","afr/290","afr/296","afr/297"]
-  },
-  {
-    "id": 3,
-    "title": "Modern Horizons 2",
-    "cards": ["mh2/261"]
+    "hidden": []
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
   {
     "id": 1,
     "title": "No importa el set/edición, pero que sea baratico",
-    "cards": ["c19/18","m11/162", "ddj/47", "all/89", "c21/297"],
-    "hidden": ["mh2/261"]
+    "cards": ["c19/18","m11/162", "all/89"],
+    "hidden": []
   }
 ]
