@@ -1,13 +1,18 @@
 [
   {
+    "id": 6,
+    "title": "Otros Kamigawa",
+    "cards": ["neo/266", "neo/268", "neo/271", "neo/276", "neo/278", "neo/114"]
+  },
+  {
     "id": 3,
-    "title": "Kamigawa",
-    "cards": ["neo/2", "neo/23", "neo/60", "neo/102", "neo/134", "neo/194", "neo/200", "neo/359", "neo/227", "neo/362", "neo/406", "neo/407", "neo/408", "neo/409", "neo/410"]
+    "title": "Dragones Kamigawa",
+    "cards": ["neo/2", "neo/406", "neo/23", "neo/407", "neo/60", "neo/408", "neo/102", "neo/409", "neo/134", "neo/410", "neo/200", "neo/194", "neo/359", "neo/227", "neo/362"]
   },
   {
     "id": 5,
     "title": "Innistrad MH y CV",
-    "cards": ["mid/149", "vow/170"]
+    "cards": ["mid/149", "mid/150", "vow/170"]
   },
   {
     "id": 4,
