@@ -1,20 +1,55 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import {
+  readDataPromise,
+  removeFromWanted,
+  SIGNIN_PROVIDERS,
+  signInWithProvider,
+  signOut,
+} from './config/firebase';
 import './App.css';
 
+import { ReactComponent as UserIcon } from './assets/user.svg';
+import { ReactComponent as Localstorage } from './assets/localstorage.svg';
+import { ReactComponent as Save } from './assets/save.svg';
+
 import useLocalStorage from './utils/useLocalStorage';
-import cardList from './cardlist.json';
 
 const endpoint = 'https://api.scryfall.com';
 
 const App = () => {
+  const [user, setUser] = useState(null);
+  const [cardList, setCardList] = useState([]);
+  const [fetchNeed, setFetchNeed] = useState(false);
   const [savedCardData, setSavedCardData] = useLocalStorage('savedCardData', []);
   const [gotCards, setGotCards] = useLocalStorage('gotCards', []);
 
+  const handleLogin = () => {
+    const userBoy = signInWithProvider(SIGNIN_PROVIDERS.GOOGLE);
+    userBoy.then((data) => {
+      setUser(data.user);
+    });
+  };
+  
+  const handleLogout = () => {
+    const userBoy = signOut();
+    userBoy.then((data) => {
+      setUser(null);
+    });
+  };
+
   const gotACard = (id) => {
     setGotCards([...gotCards, id]);
+  };
+
+  const commitChanges= () => {
+    if(gotCards.length > 0) {
+      setGotCards([]);
+      removeFromWanted(gotCards);
+      setTimeout(() => setFetchNeed(!fetchNeed), 1000);
+    }
   };
 
   const lostACard = (id) => {
@@ -22,25 +57,32 @@ const App = () => {
     setGotCards(filtered);
   }
 
-  useEffect(() => {
+  const clearLocalstorage = () => {
+    setSavedCardData([]);
+    setGotCards([]);
+    setFetchNeed(!fetchNeed);
+  };
+
+  useEffect(async () => {
     const fetchCardData = async (requestList) => {
-      const requests = await Promise.allSettled(requestList);
-  
+      const requests = await Promise.allSettled(requestList);  
       const datas = requests.map((item) => item.value?.data);
       setSavedCardData(datas);
+      console.info('Scryfall fetch');
     };
-    
-    const SearchCardList = cardList.reduce((acc, item) => [...acc, ...item.cards], []);
 
-    if (savedCardData.length === 0 || SearchCardList.length !== savedCardData.length) {
-      const urlList = [];
-      cardList.map((item) => item.cards.map((id) => urlList.push(axios.get(`${endpoint}/cards/${id}`))));
-      fetchCardData(urlList);
-    }
-  }, []);
+    await readDataPromise().then((data) => {
+      setCardList(data.reverse());
+      const SearchCardList = data.reduce((acc, item) => (item.cards ? [...acc, ...item.cards] : acc), []);
+
+      if (SearchCardList && (savedCardData.length === 0 || SearchCardList.length !== savedCardData.length)) {
+        const promiseList = SearchCardList.map((id) => axios.get(`${endpoint}/cards/${id}`));
+        fetchCardData(promiseList);
+      }
+    });
+  }, [fetchNeed]);
 
   const getCard = (id) => savedCardData.filter((item) => item?.scryfall_uri.includes(id))[0];
-
   const getArt = (object) => object?.image_uris?.small || object?.card_faces[0]?.image_uris?.small;
   const getTitle = (object) => object?.name;
   const getExp = (object) => object?.set_name;
@@ -56,7 +98,7 @@ const App = () => {
             <div className="card-list">
               {
                 savedCardData.length > 0
-                  ? item.cards.map((i) =>
+                  ? item.cards?.map((i) =>
                     !gotCards.includes(i)
                       ? (
                         <div key={i} data-code={i} className="card" onClick={() => gotACard(i)}>
@@ -88,10 +130,42 @@ const App = () => {
               <div key={i} data-code={i} className="card" onClick={() => lostACard(i)}>
                 <img src={getArt(getCard(i))} alt={getTitle(getCard(i))} />
                 <div className="title">{getTitle(getCard(i))}</div>
+                <small>{i}</small>
               </div>
             ))
           }
         </div>
+      </div>
+      <div>
+        {
+          !user && (
+            <button className='user-icon' onClick={handleLogin}>
+              <UserIcon />
+            </button>
+          )
+        }
+        {
+          user?.email === 'nomeacuerdo@gmail.com' && (
+            <>
+              <button className='user-icon' onClick={commitChanges}>
+                <Save />
+              </button>
+              <button className='user-icon' onClick={handleLogout}>
+                <UserIcon />
+              </button>
+              <button className='user-icon' onClick={clearLocalstorage}>
+                <Localstorage />
+              </button>
+            </>
+          )
+        }
+        {
+          user && user?.email !== 'nomeacuerdo@gmail.com' && (
+              <button onClick={handleLogout}>
+                Largo de aqui
+              </button>
+            )
+        }
       </div>
     </div>
   );

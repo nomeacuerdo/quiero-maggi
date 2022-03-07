@@ -34,3 +34,22 @@
   padding: 5px;
   text-align: center;
 }
+
+.user-icon {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+}
+
+.user-icon svg {
+  height: 100%;
+  transition: all .4s;
+  width: 100%;
+}
+
+.user-icon:hover svg,
+.user-icon:focus svg {
+  fill: red;
+}
