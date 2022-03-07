@@ -1,32 +1,33 @@
-[
-  {
-    "id": 6,
-    "title": "Otros Kamigawa",
-    "cards": ["neo/266", "neo/268", "neo/271", "neo/276", "neo/278"]
+{
+  "gotCards" : {
+    "description" : "Aqui va todo lo que se ha conseguido, para tracking purposes"
   },
-  {
-    "id": 3,
-    "title": "Dragones Kamigawa",
-    "cards": ["neo/433", "neo/407", "neo/408", "neo/102", "neo/409", "neo/134", "neo/410", "neo/200", "neo/194", "neo/359", "neo/362"]
-  },
-  {
-    "id": 5,
-    "title": "Innistrad MH y CV",
-    "cards": ["mid/149", "vow/170", "vow/150"]
-  },
-  {
-    "id": 4,
-    "title": "Adventures in the Forgotten Realms",
-    "cards": ["afr/100","afr/197","afr/350"]
-  },
-  {
-    "id": 2,
-    "title": "Cartas de esta edición exactamente",
-    "cards": ["tneo/7", "tvow/9", "tafr/4", "tmh2/4", "tkhm/11","tmed/W2", "sld/522", "ps19/207"]
-  },
-  {
-    "id": 1,
-    "title": "No importa el set/edición, pero que sea baratico",
-    "cards": ["c19/18","m11/162", "all/89"]
+  "needCards" : {
+    "data" : [ {
+      "cards" : [ "c19/18", "m11/162", "all/89", "znr/102", "c21/193", "khm/170", "ths/153" ],
+      "id" : 0,
+      "title" : "No importa el set/edición, pero que sea baratico"
+    }, {
+      "cards" : [ "tneo/7", "tvow/9", "tafr/4", "tmh2/4", "tkhm/11", "tmed/W2", "sld/522", "ps19/207" ],
+      "id" : 1,
+      "title" : "Cartas de esta edición exactamente"
+    }, {
+      "cards" : [ "afr/100", "afr/197", "afr/350" ],
+      "id" : 2,
+      "title" : "Adventures in the Forgotten Realms"
+    }, {
+      "cards" : [ "mid/149", "vow/170", "vow/150" ],
+      "id" : 3,
+      "title" : "Innistrad MH y CV"
+    }, {
+      "cards" : [ "neo/433", "neo/407", "neo/408", "neo/102", "neo/409", "neo/134", "neo/410", "neo/200", "neo/194", "neo/359", "neo/362" ],
+      "id" : 4,
+      "title" : "Dragones Kamigawa"
+    }, {
+      "cards" : [ "neo/266", "neo/268", "neo/271", "neo/276", "neo/278" ],
+      "id" : 5,
+      "title" : "Otros Kamigawa"
+    } ],
+    "description" : "Las cartas que busco. Si esta collection está vacía, algo falló"
   }
-]
+}
