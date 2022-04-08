@@ -23,8 +23,8 @@ const db = getDatabase();
 
 // Database functions
 
-const writeData = (cardId) => {
-  set(ref(db, `gotCards/${cardId}`), cardId);
+const writeData = (cardId, source) => {
+  set(ref(db, `${source}/${cardId}`), cardId);
 };
 
 const readDataPromise = () => {
@@ -40,8 +40,8 @@ const readDataPromise = () => {
   })
 };
 
-const removeFromWanted = (cardArray) => {
-  cardArray.map((cardId) => writeData(cardId));
+const removeFromWanted = (cardArray, source) => {
+  cardArray.map((cardId) => writeData(cardId, source));
   readDataPromise().then((data) => {
     const filteredData = data.map((item) => {
       const filteredCards = item.cards?.filter((i) => !cardArray.includes(i));

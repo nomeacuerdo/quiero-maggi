@@ -40,7 +40,7 @@
   border: 0;
   cursor: pointer;
   height: 64px;
-  width: 64px;
+  width: 100px;
 }
 
 .user-icon svg {
@@ -52,4 +52,9 @@
 .user-icon:hover svg,
 .user-icon:focus svg {
   fill: red;
+}
+
+.button-list {
+  align-items: flex-start;
+  display: flex;
 }

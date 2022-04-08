@@ -14,6 +14,7 @@ import './App.css';
 import { ReactComponent as UserIcon } from './assets/user.svg';
 import { ReactComponent as Localstorage } from './assets/localstorage.svg';
 import { ReactComponent as Save } from './assets/save.svg';
+import { ReactComponent as Shipping } from './assets/shipping.svg';
 
 import useLocalStorage from './utils/useLocalStorage';
 
@@ -44,10 +45,18 @@ const App = () => {
     setGotCards([...gotCards, id]);
   };
 
-  const commitChanges= () => {
+  const commitChanges = () => {
     if(gotCards.length > 0) {
       setGotCards([]);
-      removeFromWanted(gotCards);
+      removeFromWanted(gotCards, 'gotCards');
+      setTimeout(() => setFetchNeed(!fetchNeed), 1000);
+    }
+  };
+
+  const gotOnline = () => {
+    if(gotCards.length > 0) {
+      setGotCards([]);
+      removeFromWanted(gotCards, 'onlineCards');
       setTimeout(() => setFetchNeed(!fetchNeed), 1000);
     }
   };
@@ -136,7 +145,7 @@ const App = () => {
           }
         </div>
       </div>
-      <div>
+      <div className="button-list">
         {
           !user && (
             <button className='user-icon' onClick={handleLogin}>
@@ -148,13 +157,16 @@ const App = () => {
           user?.email === 'nomeacuerdo@gmail.com' && (
             <>
               <button className='user-icon' onClick={commitChanges}>
-                <Save />
+                <Save /> Save on Got Cards
               </button>
-              <button className='user-icon' onClick={handleLogout}>
-                <UserIcon />
+              <button className='user-icon' onClick={gotOnline}>
+                <Shipping /> Ordered online, awaiting arrival
               </button>
               <button className='user-icon' onClick={clearLocalstorage}>
-                <Localstorage />
+                <Localstorage /> Clear Local Storage
+              </button>
+              <button className='user-icon' onClick={handleLogout}>
+                <UserIcon /> Logout
               </button>
             </>
           )
