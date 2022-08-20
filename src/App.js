@@ -80,7 +80,10 @@ const App = () => {
       console.info('Scryfall fetch');
     };
 
-    await readDataPromise().then((data) => {
+    await readDataPromise().then((dataObject) => {
+      const data = Object.keys(dataObject).map((k) => dataObject[k]);
+      data.sort((a, b) => b.order - a.order);
+
       setCardList(data.reverse());
       const SearchCardList = data.reduce((acc, item) => (item.cards ? [...acc, ...item.cards] : acc), []);
 
