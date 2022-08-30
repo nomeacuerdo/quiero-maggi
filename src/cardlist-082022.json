@@ -1,0 +1,258 @@
+{
+  "gotCards": {
+    "2x2": {
+      "18": "2x2/18"
+    },
+    "a25": {
+      "32": "a25/32"
+    },
+    "afr": {
+      "100": "afr/100"
+    },
+    "c17": {
+      "212": "c17/212"
+    },
+    "c19": {
+      "18": "c19/18"
+    },
+    "chk": {
+      "275": "chk/275",
+      "282": "chk/282"
+    },
+    "clb": {
+      "161": "clb/161"
+    },
+    "cmr": {
+      "187": "cmr/187"
+    },
+    "csp": {
+      "81": "csp/81"
+    },
+    "description": "Aqui va todo lo que se ha conseguido, para tracking purposes",
+    "dom": {
+      "201": "dom/201"
+    },
+    "dst": {
+      "67": "dst/67"
+    },
+    "iko": {
+      "237": "iko/237"
+    },
+    "jou": {
+      "12": "jou/12"
+    },
+    "khm": {
+      "15": "khm/15"
+    },
+    "m11": {
+      "162": "m11/162"
+    },
+    "neo": {
+      "74": "neo/74",
+      "134": "neo/134",
+      "194": "neo/194",
+      "266": "neo/266",
+      "271": "neo/271",
+      "276": "neo/276",
+      "410": "neo/410"
+    },
+    "rav": {
+      "257": "rav/257"
+    },
+    "snc": {
+      "134": "snc/134",
+      "234": "snc/234",
+      "254": "snc/254"
+    },
+    "tafr": {
+      "4": "tafr/4"
+    },
+    "ths": {
+      "153": "ths/153"
+    },
+    "tsr": {
+      "198": "tsr/198"
+    },
+    "tvow": {
+      "9": "tvow/9"
+    },
+    "vow": {
+      "170": "vow/170"
+    },
+    "znr": {
+      "102": "znr/102"
+    }
+  },
+  "needCards": {
+    "data": [
+      {
+        "cards": [
+          "cmr/239",
+          "brb/25",
+          "cm1/10",
+          "mh2/108",
+          "mh2/166",
+          "mh2/96",
+          "mh2/71",
+          "mh2/44",
+          "plist/483",
+          "mh1/164",
+          "c18/50",
+          "mh1/46",
+          "mh1/128",
+          "ema/177",
+          "cn2/54"
+        ],
+        "id": 0,
+        "title": "No importa el set/edición, pero que sea baratico"
+      },
+      {
+        "cards": [
+          "tmed/W2",
+          "sld/522",
+          "ps19/207",
+          "tdmu/10",
+          "p30h/4",
+          "gdy/6",
+          "ppro/p2022-2"
+        ],
+        "id": 1,
+        "title": "Cartas de esta edición exactamente"
+      },
+      {
+        "cards": [
+          "afr/350"
+        ],
+        "id": 2,
+        "title": "Adventures in the Forgotten Realms"
+      },
+      {
+        "cards": [
+          "clb/367",
+          "clb/389"
+        ],
+        "id": 3,
+        "title": "Dragones Baldurs"
+      },
+      {
+        "cards": [
+          "dmc/8",
+          "dmc/9",
+          "dmc/14",
+          "dmc/43"
+        ],
+        "id": 4,
+        "title": "Dominaria Commander"
+      },
+      {
+        "cards": [
+          "dmu/313",
+          "dmu/285",
+          "dmu/214",
+          "dmu/143",
+          "dmu/120",
+          null,
+          "dmu/314",
+          "dmu/215",
+          "dmu/288",
+          "dmu/290",
+          "dmu/73",
+          "dmu/252",
+          "dmu/236",
+          "dmu/121",
+          "dmu/301",
+          "dmu/202"
+        ],
+        "id": 5,
+        "title": "Dominaria United"
+      }
+    ],
+    "description": "Las cartas que busco. Si esta collection está vacía, algo falló"
+  },
+  "onlineCards": {
+    "5dn": {
+      "111": "5dn/111"
+    },
+    "afr": {
+      "197": "afr/197",
+      "350": "afr/350"
+    },
+    "all": {
+      "89": "all/89"
+    },
+    "c21": {
+      "193": "c21/193"
+    },
+    "clb": {
+      "111": "clb/111",
+      "366": "clb/366",
+      "369": "clb/369",
+      "376": "clb/376",
+      "406": "clb/406"
+    },
+    "cmr": {
+      "186": "cmr/186"
+    },
+    "dom": {
+      "39": "dom/39"
+    },
+    "eld": {
+      "120": "eld/120"
+    },
+    "isd": {
+      "36": "isd/36"
+    },
+    "khm": {
+      "170": "khm/170"
+    },
+    "mh2": {
+      "132": "mh2/132"
+    },
+    "mid": {
+      "149": "mid/149"
+    },
+    "mrd": {
+      "42": "mrd/42"
+    },
+    "neo": {
+      "102": "neo/102",
+      "200": "neo/200",
+      "268": "neo/268",
+      "278": "neo/278",
+      "359": "neo/359",
+      "362": "neo/362",
+      "407": "neo/407",
+      "408": "neo/408",
+      "409": "neo/409",
+      "433": "neo/433"
+    },
+    "sld": {
+      "1015": "sld/1015",
+      "1018": "sld/1018"
+    },
+    "snc": {
+      "240": "snc/240",
+      "250": "snc/250",
+      "260": "snc/260"
+    },
+    "som": {
+      "132": "som/132"
+    },
+    "tafr": {
+      "4": "tafr/4"
+    },
+    "tkhm": {
+      "11": "tkhm/11"
+    },
+    "tmh2": {
+      "4": "tmh2/4"
+    },
+    "tneo": {
+      "7": "tneo/7"
+    },
+    "vow": {
+      "150": "vow/150",
+      "170": "vow/170"
+    }
+  }
+}
